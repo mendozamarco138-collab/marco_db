@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco_DB PWA</title>
+    
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .card {
+            background: #333;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #ff6600;
+        }
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>MARCO_DB</h1>
+        <p>Status: <span id="status">Active</span></p>
+        <button onclick="checkInventory()">Check Inventory</button>
+    </div>
+
+    <script>
+        // Gamit ang inaral nating Arrays kaninang madaling araw
+        const inventory = ["Barako Coffee", "Sugar", "Creamer", "Cups"];
+
+        function checkInventory() {
+            let listahan = "Stocks sa Lipa Kiosk:\n";
+            for(let i = 0; i < inventory.length; i++) {
+                listahan += (i + 1) + ". " + inventory[i] + "\n";
+            }
+            alert(listahan);
+        }
+
+        // Simple Service Worker Registration (Shortcut)
+        if ('serviceWorker' in navigator) {
+            console.log("PWA Ready: Pwedeng maging App sa Android!");
+        }
+    </script>
+
+</body>
+</html>
