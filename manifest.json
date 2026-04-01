@@ -1,7 +1,7 @@
 {
   "name": "Marco_DB Kiosk System",
   "short_name": "MarcoDB",
-  "start_url": "index.html",
+  "start_url": "/marco_db/index.html",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#ff6600",
